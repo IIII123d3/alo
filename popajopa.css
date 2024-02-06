@@ -1,0 +1,165 @@
+.background {
+    /* Замените 'path_to_your_image' на путь к вашему изображению */
+    background: url('фон.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 65vh; /* Высота равна высоте окна просмотра */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует текст по вертикали */
+    justify-content: center; /* Центрирует текст по горизонтали */
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+main {
+    margin: 15px;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+.column {
+    flex: 1;
+}
+.column h2 {
+    color: #f0f0f0; /* Цвет заголовка */
+    /* Добавьте другие стили для заголовка по мере необходимости */
+}
+.column p {
+    color: #ccc; /* Цвет текста */
+    /* Добавьте другие стили для текста по мере необходимости */
+}
+.inf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+    background-color: #ccc;
+}
+.card {
+    border: 1px solid #b3b1b1;
+    width: 400px; /* Замените на реальный размер */
+    padding: 10px;
+    margin: 50px;
+    border-radius: 5px;
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+    background-color: rgb(211, 179, 74)
+}
+.card img {
+    width: 100%; /* Замените на реальный размер */
+    height: auto;
+}
+.card p {
+    font-size: 16px;
+}
+.katalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+    background-color: #ccc; 
+}
+.cartochka {
+    border: 1px solid #d4af49;
+    width: 200px; /* Замените на реальный размер */
+    padding: 10px;
+    margin: 50px;
+    border-radius: 20px;
+    overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+    background-color: rgb(211, 179, 74)
+}
+.cartochka img {
+    width: 100%; /* Замените на реальный размер */
+    height: auto;
+}
+.cartochka h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.cartochka p {
+    font-size: 16px;
+    flex-direction: column;
+}
+.text1 {
+    color: rgb(255, 255, 255); /* Цвет текста */
+    font-size: 2em; /* Размер шрифта */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.text2 {
+    color: rgb(255, 255, 255); /* Цвет текста */
+    font-size: 1.5em; /* Размер шрифта */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.text3 {
+    color: rgb(255, 255, 255); /* Цвет текста */
+    font-size: 1em; /* Размер шрифта */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.block {
+    width: 100%; /* Замените на реальный размер */
+    padding: 50px;
+    font-family: Arial, sans-serif;
+}
+.block h2 {
+    color: #000000; /* Цвет заголовка */
+    font-size: 24px; /* Размер шрифта */
+    
+}
+.block p {
+    color: #000000; /* Цвет текста */
+    font-size: 16px; /* Размер шрифта */
+    line-height: 1.5; /* Межстрочный интервал */     
+}
+.column {
+    flex: 1;
+}
+.column h2 {
+    color: #d3d3d3; /* Цвет заголовка */
+    /* Добавьте другие стили для заголовка по мере необходимости */
+}
+.column p {
+    color: #d3d3d3; /* Цвет текста */
+    /* Добавьте другие стили для текста по мере необходимости */
+}
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #bdbdbd;
+    color: #000000;
+}
+
