@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Alarm</title>
+    <style>
+        .background {
+            /* Замените 'path_to_your_image' на путь к вашему изображению */
+            background: url('фон.jpg') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            height: 50vh; /* Высота равна высоте окна просмотра */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Центрирует текст по вертикали */
+            justify-content: center; /* Центрирует текст по горизонтали */
+            overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            margin: 15px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .column {
+            flex: 1;
+        }
+        .column h2 {
+            color: #f0f0f0; /* Цвет заголовка */
+            /* Добавьте другие стили для заголовка по мере необходимости */
+        }
+        .column p {
+            color: #ccc; /* Цвет текста */
+            /* Добавьте другие стили для текста по мере необходимости */
+        }
+        .inf {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+            background-color: #ccc;
+        }
+        .card {
+            border: 1px solid #b3b1b1;
+            width: 400px; /* Замените на реальный размер */
+            padding: 10px;
+            margin: 50px;
+            border-radius: 5px;
+            overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+            background-color: rgb(211, 179, 74)
+        }
+        .card img {
+            width: 100%; /* Замените на реальный размер */
+            height: auto;
+        }
+        .card p {
+            font-size: 16px;
+        }
+        .katalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+            background-color: #ccc; 
+        }
+        .cartochka {
+            border: 1px solid #d4af49;
+            width: 200px; /* Замените на реальный размер */
+            padding: 10px;
+            margin: 50px;
+            border-radius: 20px;
+            overflow: auto; /* Добавляет прокрутку, если содержимое не помещается */
+            background-color: rgb(211, 179, 74)
+        }
+        .cartochka img {
+            width: 100%; /* Замените на реальный размер */
+            height: auto;
+        }
+        .cartochka h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .cartochka p {
+            font-size: 16px;
+            flex-direction: column;
+        }
+        .text1 {
+            color: rgb(255, 255, 255); /* Цвет текста */
+            font-size: 2em; /* Размер шрифта */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+        .text2 {
+            color: rgb(255, 255, 255); /* Цвет текста */
+            font-size: 1.5em; /* Размер шрифта */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+        .text3 {
+            color: rgb(255, 255, 255); /* Цвет текста */
+            font-size: 1em; /* Размер шрифта */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень текста для улучшения читаемости */
+            text-align: center; /* Выравнивание текста по центру */
+        }
+        .block {
+            width: 1820px; /* Замените на реальный размер */
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+        .block h2 {
+            color: #000000; /* Цвет заголовка */
+            font-size: 24px; /* Размер шрифта */
+            
+        }
+        .block p {
+            color: #000000; /* Цвет текста */
+            font-size: 16px; /* Размер шрифта */
+            line-height: 1.5; /* Межстрочный интервал */
+        }
+        .column {
+            flex: 1;
+        }
+        .column h2 {
+            color: #d3d3d3; /* Цвет заголовка */
+            /* Добавьте другие стили для заголовка по мере необходимости */
+        }
+        .column p {
+            color: #d3d3d3; /* Цвет текста */
+            /* Добавьте другие стили для текста по мере необходимости */
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+            background-color: #bdbdbd;
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Smart-Alarm</h1>
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">Полезная информация</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="background">
+                <p class="text1">Smart-Alarm</p>
+                <p class="text2">Профессиональные системы безопасности</p>
+                <p class="text3">Каталог</p>
+            </div>
+        </section>
+        <section>
+            <div class="block">
+                <h2>О нас</h2>
+                <p>Мы занимаемся продажей шинок более пяти лет и являемся официальными дилерами ведущих мировых производителей. Наша миссия - помочь вам выбрать качественные шины по привлекательной цене и предоставить полный адекватный сервис - от консультации до установки и обслуживания автомобиля. Умные покупки - это не просто выгодная цена и хорошее качество, это еще и правильная информация, советы и инструкции для выбора шин. Они также могут быть использованы для навигации профессионалов и предприятий, а также синхронизироваться с вашими другими устройствами и приложениями. Мы гарантируем высокое качество, надежность и безопасность наших продуктов, а также предлагаем гарантию, бесплатную доставку и поддержку наших клиентов.</p>
+            </div>
+            
+        <h2>Каталог</h2> 
+        <div class="tabs">
+            <p>Все</p>
+            <p>Простые будильники</p>
+            <p>Будильники особые</p>
+        </div>
+        <div class="katalog">
+            <div class="cartochka">
+                <h2>Умный будильник-лампа</h2>
+                <img src="1.jpg" alt="Описание изображения 1">
+                <p>Умный будильник-лампа Smart Z light XT PRO</p>
+                <p>7999 руб.</p>
+            </div>
+            <div class="cartochka">
+                <h2>Умный будильник-фитнес-трекер</h2>
+                <img src="2.jpg" alt="Описание изображения 2">
+                <p>Умный будильник-фитнес-трекер Smart Y fit</p>
+                <p>5999 руб.</p>
+            </div>
+            <div class="cartochka">
+                <h2>Умный будильник-кофеварка</h2>
+                <img src="3.jpg" alt="Описание изображения 3">
+                <p>Умный будильник-кофеварка Smart W coffee</p>
+                <p>4999 руб.</p>
+            </div>
+            <div class="cartochka">
+                <h2>Умный будильник</h2>
+                <img src="4.jpg" alt="Описание изображения 4">
+                <p>Умный будильник Smart V basic</p>
+                <p>3999 руб.</p>
+            </div>
+        </div>
+        <h2>Полезная информация</h2>
+        <div class="inf">
+            <div class="card">
+                <img src="10.jpg" alt="Описание изображения">
+                <p>Как выбрать умный будильник? Советы перед покупкой</p>
+            </div>
+            <div class="card">
+                <img src="20.jpg" alt="Описание изображения">
+                <p>Дополнительная конфигурация к умным будильникам</p>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <div class="column">
+            <p>В нашем интернет-магазине представлен большой выбор умных будильников от известных мировых производителей.</p>
+            <p>Все товары, представленные на нашем сайте, отобраны лучшими специалистами в этой области.</p>
+            <p>CopyRight 2024 Smart-Alarm</p>
+        </div>
+        <div class="column">
+            <h2>КОМПАНИЯ Smart-Alarm</h2>
+            <p>О нас</p>
+            <p>Наши преимущества</p>
+            <p>Наши консультанты</p>
+        </div>
+        <div class="column">
+            <h2>ПОКУПАТЕЛЯМ</h2>
+            <p>Каталог</p>
+            <p>Бренды</p>
+            <p>Полезная информация</p>
+        </div>
+        <div class="column">
+            <h2>ПОМОЩЬ</h2>
+            <p>Как оформить заказ</p>
+            <p>Способы оплаты</p>
+            <p>Доставка и возврат товаров</p>
+        </div>
+    </div>
+</body>
+</html>
