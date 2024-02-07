@@ -130,7 +130,7 @@ main {
     text-align: center; /* Выравнивание текста по центру */
 }
 .block {
-    width: 100%; /* Замените на реальный размер */
+    width: 90%; /* Замените на реальный размер */
     padding: 50px;
     font-family: Arial, sans-serif;
 }
@@ -162,4 +162,7 @@ main {
     background-color: #bdbdbd;
     color: #000000;
 }
+a, u, p {
+    text-decoration: none;
+  }
 
